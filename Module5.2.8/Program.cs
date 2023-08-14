@@ -33,15 +33,24 @@ namespace Module5._2._8
             
             return array;
         }
-        static void Main(string[] args)
+        static void ShowArray(int[] array, bool isSort = false)
         {
             
-            int[] array = GetArrayFromConsole();
-            int[] sortedArray = SortArray(array);
-            foreach (var element in sortedArray)
+            if (isSort)
+            {
+                array = SortArray(array);
+            }
+            foreach (var element in array)
             {
                 Console.WriteLine(element);
             }
+        }
+        static void Main(string[] args)
+        {
+            
+            int[] array = GetArrayFromConsole(10);
+            ShowArray(array, isSort: true);
+            
         }
     }
 }
