@@ -36,8 +36,9 @@ namespace Module5._2._8
         static void Main(string[] args)
         {
             
-            int[] array = SortArray(GetArrayFromConsole());
-            foreach (var element in array)
+            int[] array = GetArrayFromConsole();
+            int[] sortedArray = SortArray(array);
+            foreach (var element in sortedArray)
             {
                 Console.WriteLine(element);
             }
