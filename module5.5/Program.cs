@@ -21,6 +21,7 @@ namespace module5._5
             var modif = saidworld;
             if (modif.Length > 2)
                 modif = modif.Remove(0, 2);
+            Console.BackgroundColor = (ConsoleColor)deep;
             Console.WriteLine("..." + modif);
 
 
