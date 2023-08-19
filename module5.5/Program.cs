@@ -13,8 +13,15 @@ namespace module5._5
             var deep = int.Parse(Console.ReadLine());
 
             Echo(str, deep);
+            Console.WriteLine(Factorial(20));
+            Console.WriteLine("Введите число");
+            int N = int.Parse(Console.ReadLine());
+            Console.WriteLine("Введите степень");
+            Byte power = Byte.Parse(Console.ReadLine());
 
+            Console.WriteLine(PowerUp(N, power));
             Console.ReadKey();
+
         }
         static void Echo(string saidworld, int deep)
         {
@@ -30,6 +37,31 @@ namespace module5._5
                 Echo(modif, deep - 1);
             }
         }
+        static decimal Factorial(int x)
+        {
+            if (x == 0)
+            {
+                return 1;
+            }
+            else
+            {
+                return x * Factorial(x - 1);
+            }
+        }
+        private static int PowerUp(int N, byte pow)
+        {
+            int result = N;
+            
+            if (pow == 0)
+                return 1;
+            if (pow == 1)
+                return N;
+
+            result = result * PowerUp(N, --pow);
+            
+            return result;
+        }
+
     }
 
 }
